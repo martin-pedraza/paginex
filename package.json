@@ -4,6 +4,7 @@
   "description": "A simple pagination utility for arrays",
   "license": "MIT",
   "author": "martin-pedraza",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/paginex.esm.js",
   "typings": "dist/index.d.ts",
