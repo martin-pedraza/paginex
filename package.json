@@ -1,23 +1,28 @@
 {
   "name": "paginex",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple pagination utility for arrays",
   "license": "MIT",
   "author": "martin-pedraza",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/paginex.esm.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/paginex.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/paginex.esm.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build --format esm",
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -33,10 +38,6 @@
     "typescript": "^5.9.3"
   },
   "size-limit": [
-    {
-      "path": "dist/paginex.cjs.production.min.js",
-      "limit": "10 KB"
-    },
     {
       "path": "dist/paginex.esm.js",
       "limit": "10 KB"
